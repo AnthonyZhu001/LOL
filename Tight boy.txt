@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .content {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+[1:32 AM]
+<h1>Welcome to My Personal Webpage</h1>
+    <button onclick="showContent('aboutMe')">About Me</button>
+    <button onclick="showContent('university')">My University</button>
+    <button onclick="showContent('resume')">Resume</button>
+    <div id="aboutMe" class="content">
+        <h2>About Me</h2>
+        <p>My name is Andy Yu. Some of my hobbies are playing games, reading novels and talking to freinds .</p>
+    </div>
+    <div id="university" class="content">
+        <h2>My University</h2>
+        <p>I study at BMCC and my major is computer science.</p>
+    </div>
+    <div id="resume" class="content">
+        <h2>Resume</h2>
+        <p><strong>Name:</strong> Andy Yu</p>
+        <p><strong>Email:</strong> Dailyboy360@gmail.com</p>
+        <p><strong>Education:</strong></p>
+        <ul>
+            <li>Bachelor from Baruch </li>
+        </ul>
+
+    <p><strong>Experience:</strong></p>
+        <ul>
+            <li> Software Developer at Amazon - 5 years</li>
+    </div>
+    <script>
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
